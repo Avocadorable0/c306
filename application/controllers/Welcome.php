@@ -41,6 +41,12 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 		echo $this->config->item('sess_save_path');
 	}
+
+	public function settitle(){
+
+		$data['titre']='Echange';
+        $this->load->view('header',$data);
+	}
   
 	// public function session(){
 	// 	$this->load->library('session');
