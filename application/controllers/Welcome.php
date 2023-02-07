@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 		$data = array();
 		$this->load->model('newsModel');
 		$this->load->database();
-		$data['listeProduit'] = $this->newsModel->showProduct();
+		$data['showProduit'] = $this->newsModel->showProduct();
 		$this->load->helper('url');
 		$this->load->view ('template',$data);
 	}
