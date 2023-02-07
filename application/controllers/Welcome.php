@@ -28,7 +28,29 @@ class Welcome extends CI_Controller {
 		$this->load->view('template/login');
 	}
 
+<<<<<<< Updated upstream
 
+=======
+	public function check()
+	{
+		$mail=$this->input->post('email');
+		$mdp=$this->input->post('mdp');
+		$this->load->model('newsModel');
+		$valiny=$this->newsModel->conekta($mail,$mdp);
+
+		// $this->session->set_userdata('userId',$valiny['idutilisateur']);
+
+		$data=array();
+		$data['userData']=$valiny;
+
+		if(count($valiny)==0){
+			redirect('login');
+		}else{
+			$this->load->helper('url');
+			$this->load->view("template",$data);
+		}
+	}
+>>>>>>> Stashed changes
 	public function produit(){
 		$data = array();
 		$this->load->model('newsModel');
@@ -36,6 +58,7 @@ class Welcome extends CI_Controller {
 		$data['listeProduit'] = $this->newsModel->showProduct();
 		$this->load->helper('url');
 		$this->load->view ('template/content',$data);
+<<<<<<< Updated upstream
 	}
 
 	public function check()
@@ -53,6 +76,8 @@ class Welcome extends CI_Controller {
 			$this->load->helper('url');
 			$this->load->view("template",$data);
 		}
+=======
+>>>>>>> Stashed changes
 	}
   
 	// public function session(){
