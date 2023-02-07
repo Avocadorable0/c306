@@ -70,7 +70,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="sign_up">Don't have an account yet ? <a href="welcome/signIn">Sign up now</a></div>
+                                    <div id="sign_up">Don't have an account yet ? <a href="signIn">Sign up now</a></div>
                                 </div>
                     </div>
                 </div>
