@@ -12,11 +12,11 @@ class newsModel extends CI_Model {
         return $result;
     }
     public function conekta($Email,$Mdp){
-    $sql="select * from utilisateur where gmail=%s and mdp = %s";
-    $sql1=sprintf($sql,$this->db->escape($Email),$this->db->escape($Mdp));
-    $query=$this->db->query($sql1);
-    $result=$query->row_array();
-    return $result;
+        $sql="select * from utilisateur where gmail=%s and mdp = %s";
+        $sql1=sprintf($sql,$this->db->escape($Email),$this->db->escape($Mdp));
+        $query=$this->db->query($sql1);
+        $result=$query->row_array();
+        return $result;
     }
 }
 
