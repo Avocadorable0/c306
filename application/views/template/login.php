@@ -31,7 +31,7 @@
                             <div class="formulaire">
                                 <div id="name"><h3>Sign In</h3></div>
                                         <div class="inpout">
-                                        <form action="welcome/check">
+                                        <form action="welcome/check" method="post">
                                             <div class="input-group input-group" id="divmail">
                                                 <span class="input-group-addon" id="sizing-addon3"><i class="far fa-user-circle"></i></span>        
                                                 <input type="email" class="form-control" name="email" required="required" placeholder="Email" aria-describedby="sizing-addon1" id="username">
