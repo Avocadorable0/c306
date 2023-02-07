@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/index.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/fontawesome-5/css/all.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
 
