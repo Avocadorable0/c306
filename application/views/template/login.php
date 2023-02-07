@@ -23,7 +23,7 @@
 
                         <div class="col-md-7">
                             <div id="backimg">
-                                <img src="<?php echo base_url(); ?>assets/images/background.jpg" class="img-responsive" alt="Responsive image">
+                                <img src="<?php echo base_url(); ?>assets/images/background.jpg" class="img-responsive" alt="Responsive image" >
                             </div>
                         </div>
     
