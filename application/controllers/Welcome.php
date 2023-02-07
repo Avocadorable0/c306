@@ -42,10 +42,15 @@ class Welcome extends CI_Controller {
 		echo $this->config->item('sess_save_path');
 	}
 
-	public function settitle(){
-
+	public function setheader(){
 		$data['titre']='Echange';
         $this->load->view('header',$data);
+	}
+
+	public function setfooter(){
+				$data=array();
+				$data['footer']='ETU2203-Fanilo / ETU2238-Loick / ETU2147-Faly';
+				$this->load->view('footer',$data);
 	}
   
 	// public function session(){
