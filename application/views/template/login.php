@@ -31,7 +31,7 @@
                             <div class="formulaire">
                                 <div id="name"><h3>Sign In</h3></div>
                                         <div class="inpout">
-                                        <form action="check" method="post">
+                                        <form action="welcome/check" method="post">
                                             
                                             <div class="input-group input-group" id="divmail">
                                                 <span class="input-group-addon" id="sizing-addon3"><i class="far fa-user-circle"></i></span>        
@@ -70,7 +70,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="sign_up">Don't have an account yet ? <a href="signIn">Sign up now</a></div>
+                                    <div id="sign_up">Don't have an account yet ? <a href="welcome/signIn">Sign up now</a></div>
                                 </div>
                     </div>
                 </div>
