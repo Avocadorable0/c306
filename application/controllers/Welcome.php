@@ -38,7 +38,7 @@ class Welcome extends CI_Controller {
 		$this->load->database();
 		$data['showProduit'] = $this->newsModel->showProduct();
 		$this->load->helper('url');
-		$this->load->view ('template/template/content',$data);
+		$this->load->view ('template/template',$data);
 	}
 
 	public function check()
@@ -59,6 +59,24 @@ class Welcome extends CI_Controller {
 			$this->load->helper('url');
 			$this->load->view('template',$data);
 		}
+	}
+	public function signIn()
+	{
+		$this->load->helper('url');
+		$this->load->view ('template/Inscription');
+	}
+	public function inscr()
+	{
+		$nom=$this->input->post('nom');
+		$mail=$this->input->post('email');
+		$mdp=$this->input->post('mdp1');
+		$this->load->model('newsModel');
+
+		$valiny=$this->newsModel->inscri($nom,$mail,$mdp);
+		$this->load->helper('url');
+		$this->load->view('template/login');
+		
+
 	}
   
 	// public function session(){

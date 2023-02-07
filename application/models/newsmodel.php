@@ -30,6 +30,12 @@ class newsModel extends CI_Model {
         $result=$query->row_array();
         return $result;
     }
+    public function inscri($Nom,$Email,$Mdp){
+        $sql="insert into utilisateur values(null,%s,%s,%s,0)";
+        $sql1=sprintf($sql,$this->db->escape($Nom),$this->db->escape($Email),$this->db->escape($Mdp));
+        $this->db->query($sql1);
+        echo $this->db->affected_rows();
+    }
 }
 
 

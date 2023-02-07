@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/index.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/fontawesome-5/css/all.css">
-    <title>Login</title>
+    <title>Sign in</title>
 </head>
 <body>
 
@@ -31,20 +31,33 @@
                             <div class="formulaire">
                                 <div id="name"><h3>Sign In</h3></div>
                                         <div class="inpout">
-                                        <form action="check" method="post">
+                                        <form action="inscr" method="post">
+
+                                        <div class="input-group input-group" id="divmail">
+                                                <span class="input-group-addon" id="sizing-addon3"><i class="far fa-user-circle"></i></span>        
+                                                <input type="Text" class="form-control" name="nom" required="required" placeholder="Nom" aria-describedby="sizing-addon1" id="username">
+                                            </div>
+
+
                                             <div class="input-group input-group" id="divmail">
                                                 <span class="input-group-addon" id="sizing-addon3"><i class="far fa-user-circle"></i></span>        
                                                 <input type="email" class="form-control" name="email" required="required" placeholder="Email" aria-describedby="sizing-addon1" id="username">
                                             </div>
 
+                                            
                                             <div class="input-group input-group" id="divpass">
                                                 <span class="input-group-addon" id="sizing-addon3"><i class="far fa-eye-slash"></i></span>        
                                                 <input type="password" class="form-control" name="mdp" required="required" placeholder="Password" aria-describedby="sizing-addon1" id="password">
                                             </div>
+
+                                            <div class="input-group input-group" id="divpass">
+                                                <span class="input-group-addon" id="sizing-addon3"><i class="far fa-eye-slash"></i></span>        
+                                                <input type="password" class="form-control" name="mdp1" required="required" placeholder="Repeat password" aria-describedby="sizing-addon1" id="password">
+                                            </div>
                                         </div>
 
                                         <div class="btn-group btn-group" role="group" aria-label="...">
-                                            <button type="button,submit" class="btn btn-default" id="btn_connect">Se connecter</button>
+                                            <button type="button,submit" class="btn btn-default" id="btn_connect">S'inscrire</button>
                                         </div>
                                         </form>
                                     <div id="suggestion">Or sign in with</div>
@@ -69,8 +82,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="sign_up">Don't have an account yet ? <a href="signIn">Sign up now</a></div>
-                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
