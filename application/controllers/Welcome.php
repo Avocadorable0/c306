@@ -33,24 +33,17 @@ class Welcome extends CI_Controller {
 		$this->load->view('template/login');
 	}
 
-	public function produit(){
-		$this->load->model('newsModel');
-		$this->load->database();
-		$data['showProduit'] = $this->newsModel->showProduct();
-		$this->load->helper('url');
-		$this->load->view ('template/template',$data);
-	}
-
 	public function check()
 	{
+		$data=array();
+
 		$mail=$this->input->post('email');
 		$mdp=$this->input->post('mdp');
 		$this->load->model('newsModel');
+		$this->load->database();
+
 		$valiny=$this->newsModel->conekta($mail,$mdp);
-
-		// $this->session->set_userdata('userId',$valiny['idutilisateur']);
-
-		$data=array();
+		$data['liste'] = $this->newsModel->showProduct();
 		$data['userData']=$valiny;
 
 		if(count($valiny)==0){
