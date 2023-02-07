@@ -30,10 +30,8 @@
                         <div class="col-md-5 ">
                             <div class="formulaire">
                                 <div id="name"><h3>Sign In</h3></div>
-                                    <form action="traitement/traitement.php" method="post">
                                         <div class="inpout">
-
-                                        
+                                        <form action="welcome/check">
                                             <div class="input-group input-group" id="divmail">
                                                 <span class="input-group-addon" id="sizing-addon3"><i class="far fa-user-circle"></i></span>        
                                                 <input type="email" class="form-control" name="email" required="required" placeholder="Email" aria-describedby="sizing-addon1" id="username">
@@ -48,16 +46,7 @@
                                         <div class="btn-group btn-group" role="group" aria-label="...">
                                             <button type="button,submit" class="btn btn-default" id="btn_connect">Se connecter</button>
                                         </div>
-                                    </form>    
-                                        
-                                
-
-
-                                    <div id="error">
-                                        <?php  if(isset($_GET['error'])){ ?>
-                                             <p><?php echo $_GET['error']; ?></p>   
-                                        <?php } ?>
-                                    </div>
+                                        </form>
                                     <div id="suggestion">Or sign in with</div>
 
                                     <div id="many_btn">
