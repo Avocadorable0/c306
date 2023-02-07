@@ -35,7 +35,7 @@ insert into produit values(null,'Phone','05.png',7500);
 insert into exchange values(1,1);
 insert into exchange values(2,2);
 
-select utilisateur.idutilisateur,utilisateur.nom,produit.idproduit,produit.nom from EXCHANGE
+select utilisateur.idutilisateur,utilisateur.nom as proprietaire,produit.nom as produit, prix from EXCHANGE
 join produit on produit.idproduit=EXCHANGE.idproduit
 join utilisateur on utilisateur.idutilisateur=EXCHANGE.idutilisateur;
 
