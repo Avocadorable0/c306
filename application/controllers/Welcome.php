@@ -28,31 +28,32 @@ class Welcome extends CI_Controller {
 		$this->load->view('template/login');
 	}
 
-	public function template(){
+	public function check()
+	{
+		$mail=$this->input->post('email');
+		$mdp=$this->input->post('mdp');
+		$this->load->model('newsModel');
+		$valiny=$this->newsModel->conekta($mail,$mdp);
+
+		// $this->session->set_userdata('userId',$valiny['idutilisateur']);
+
+		$data=array();
+		$data['userData']=$valiny;
+
+		if(count($valiny)==0){
+			redirect('login');
+		}else{
+			$this->load->helper('url');
+			$this->load->view("template",$data);
+		}
+	}
+	public function produit(){
 		$data = array();
 		$this->load->model('newsModel');
 		$this->load->database();
-		$data['showProduit'] = $this->newsModel->showProduct();
+		$data['listeProduit'] = $this->newsModel->showProduct();
 		$this->load->helper('url');
-		$this->load->view ('template',$data);
-	}
-
-	public function essai(){
-		$this->load->helper('url');
-		echo $this->config->item('sess_save_path');
-	}
-
-	public function setheader(){
-		$data['titre']='Echange';
-		$this->load->helper('url');
-        $this->load->view('template/header',$data);
-	}
-
-	public function setfooter(){
-				$data=array();
-				$data['copyright']='ETU2203-Fanilo / ETU2238-Loick / ETU2147-Faly';
-				$this->load->helper('url');
-				$this->load->view('template/footer',$data);
+		$this->load->view ('template/content',$data);
 	}
   
 	// public function session(){
