@@ -70,7 +70,7 @@
                 <h4 class="card-title">
                   <a href="#"><?php echo $produit['nom']; ?></a>
                 </h4>
-                <h5><?php echo $produit['prix'] ?></h5>
+                <h5><?php echo $produit['prix']; ?></h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
               </div>
               <div class="card-footer">

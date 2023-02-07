@@ -21,11 +21,24 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
-	}		
+	}
+	public function setHeader()
+	{
+		$data['Volou']='Echange';
+		$this->load->view('template/header',$data);
+	}	
 
 	public function login(){
 		$this->load->helper('url');
 		$this->load->view('template/login');
+	}
+
+	public function produit(){
+		$this->load->model('newsModel');
+		$this->load->database();
+		$data['showProduit'] = $this->newsModel->showProduct();
+		$this->load->helper('url');
+		$this->load->view ('template/template/content',$data);
 	}
 
 	public function check()
@@ -44,18 +57,9 @@ class Welcome extends CI_Controller {
 			redirect('login');
 		}else{
 			$this->load->helper('url');
-			$this->load->view("template",$data);
+			$this->load->view('template',$data);
 		}
 	}
-	public function produit(){
-		$data = array();
-		$this->load->model('newsModel');
-		$this->load->database();
-		$data['listeProduit'] = $this->newsModel->showProduct();
-		$this->load->helper('url');
-		$this->load->view ('template/content',$data);
-	}
-
   
 	// public function session(){
 	// 	$this->load->library('session');

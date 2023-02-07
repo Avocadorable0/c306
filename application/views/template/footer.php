@@ -1,7 +1,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white"><?php echo $copyright ?></p>
+      <p class="m-0 text-center text-white">ETU2203-Fanilo / ETU2238-Loick / ETU2147-Faly</p>
     </div>
     <!-- /.container -->
   </footer>
