@@ -44,12 +44,14 @@ class Welcome extends CI_Controller {
 
 	public function setheader(){
 		$data['titre']='Echange';
+		$this->load->helper('url');
         $this->load->view('template/header',$data);
 	}
 
 	public function setfooter(){
 				$data=array();
 				$data['copyright']='ETU2203-Fanilo / ETU2238-Loick / ETU2147-Faly';
+				$this->load->helper('url');
 				$this->load->view('template/footer',$data);
 	}
   
