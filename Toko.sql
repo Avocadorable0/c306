@@ -62,6 +62,8 @@ insert into produit values(null,'Vetement2','v2.jpg',75000,'maillot allemagne');
 insert into produit values(null,'Vetement3','v3.jpg',75000,'maillot manchester united');
 
 -- nouveau utilisateur pour table utilisateur
+insert into utilisateur values(null,'Faly','faly@gmail.com','123',1);
+insert into utilisateur values(null,'Fanilo','fanilo@gmail.com','456',0);
 insert into utilisateur values(null,'Loick','loick@gmail.com','789',0);
 
 -- donne table exchange

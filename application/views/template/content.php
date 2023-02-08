@@ -5,18 +5,19 @@
                 <h1 class="my-4">Votre Produit</h1>
               </div>
               
-              <?php foreach($liste as $produit){ ?>
+              <?php foreach($anazy as $prop){ ?>
               <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                  <a href="#"><img class="card-img-top" src="http://localhost:8080/ExamToko/c306/assets/images/produits/<?php echo $produit['photo']; ?>" alt=""></a>
+                  <a href="#"><img class="card-img-top" src="http://localhost:8080/ExamToko/c306/assets/images/produits/<?php echo $prop['photo']; ?>" alt=""></a>
                   <div class="card-body">
                     <h4 class="card-title">
-                      <a href="#"><?php echo $produit['nom']; ?></a>
+                      <a href="#"><?php echo $prop['proprietaire']; ?></a>
                     </h4>
-                    <h5><?php echo $produit['prix']; ?> Ar</h5>
-                    <p class="card-text"><?php echo $produit['descri']; ?>.</p>
+                    <h3><?php echo $prop['produit']; ?></h3>
+                    <h5><?php echo $prop['prix']; ?> Ar</h5>
+                    <p class="card-text"><?php echo $prop['description']; ?>.</p>
                     <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Faire une echange</a>
-                  </div>
+                  </div> 
                   <div class="card-footer">
                     <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                   </div>
