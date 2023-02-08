@@ -1,7 +1,9 @@
+-- creation base
 create database Echange;
 
 use Echange;
 
+-- creation table
     create table utilisateur(
         idutilisateur INT(5) auto_increment,
         nom VARCHAR(40),
@@ -26,6 +28,7 @@ create table exchange(
     foreign key(idproduit) REFERENCES produit(idproduit)
 );
 
+-- donne table utilisateur
 insert into utilisateur values(null,'Faly','faly@gmail.com','123',1);
 insert into utilisateur values(null,'Fanilo','fanilo@gmail.com','456',0);
 
@@ -42,10 +45,12 @@ join utilisateur on utilisateur.idutilisateur=EXCHANGE.idutilisateur;
 
 update exchange set idproduit = 1 where idproduit=2  set idproduit = 2 where idproduit=1;
 
+-- changement base
 alter table produit add descri VARCHAR(250);
 delete from exchange;
 delete from produit;
 
+-- donne table produit
 insert into produit values(null,'Montre','a1.jpg',800000,'Une montre connectee avec un design moderne et plein de fontionnalitee'); 
 insert into produit values(null,'Tablette','a2.jpg',2500000,'Nouvelle Ipad de chez apple neuve');
 insert into produit values(null,'Phone','a3.jpg',1500000,'tout nouveau Iphone avec le design des anciens modeles');
@@ -53,5 +58,19 @@ insert into produit values(null,'Chaussure1','p1.jpg',200000,'Une paire de chaus
 insert into produit values(null,'Chaussure2','p2.jpg',300000,'paire de chaussure Nike moderne et faite pour faire du sport');
 insert into produit values(null,'Chaussure3','p3.jpg',350000,'paire de chaussure simple adapter a toute situation');
 insert into produit values(null,'Vetement1','v1.jpg',50000,'T shirt pour hommme avec motif camouflage');
-insert into produit values(null,'Vetement2','v2.jpg',75000,'maillot allemange');
+insert into produit values(null,'Vetement2','v2.jpg',75000,'maillot allemagne');
 insert into produit values(null,'Vetement3','v3.jpg',75000,'maillot manchester united');
+
+-- nouveau utilisateur pour table utilisateur
+insert into utilisateur values(null,'Loick','loick@gmail.com','789',0);
+
+-- donne table exchange
+insert into exchange values(1,9);
+insert into exchange values(1,8);
+insert into exchange values(1,7);
+insert into exchange values(2,6);
+insert into exchange values(2,5);
+insert into exchange values(2,4);
+insert into exchange values(3,3);
+insert into exchange values(3,2);
+insert into exchange values(3,1);
