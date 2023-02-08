@@ -8,7 +8,7 @@
               <?php foreach($anazy as $prop){ ?>
               <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                  <a href="#"><img class="card-img-top" src="http://localhost:8080/ExamToko/c306/assets/images/produits/<?php echo $prop['photo']; ?>" alt=""></a>
+                  <a href="#"><img class="card-img-top" src="<?php echo base_url()?>assets/images/produits/<?php echo $prop['photo']; ?>" alt=""></a>
                   <div class="card-body">
                     <h4 class="card-title">
                     </h4>
@@ -64,7 +64,7 @@
           <?php foreach($liste as $produit){ ?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://localhost:8080/ExamToko/c306/assets/images/produits/<?php echo $produit['photo']; ?>" alt=""></a>
+              <a href="#"><img class="card-img-top" src="<?php echo base_url()?>assets/images/produits/<?php echo $produit['photo']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $produit['produit']; ?></a>

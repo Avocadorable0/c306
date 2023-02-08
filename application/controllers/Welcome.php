@@ -38,6 +38,7 @@ class Welcome extends CI_Controller {
 	{
 		$data=array();
 
+		$this->load->helper('url');
 		$mail=$this->input->post('email');
 		$mdp=$this->input->post('mdp');
 		$this->load->model('newsModel');
