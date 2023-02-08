@@ -20,12 +20,19 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->helper('url');
 		$this->load->view('template/login');
-	}	
+	}
 
 	public function login(){
 		$this->load->helper('url');
 		$this->load->view('template/login');
+	}
+	public function deconexion()
+	{
+		$this->load->helper('url');
+		$this->load->view('template/login');
+		
 	}
 
 	public function check()
@@ -63,10 +70,7 @@ class Welcome extends CI_Controller {
 		$valiny=$this->newsModel->inscri($nom,$mail,$mdp);
 		$this->load->helper('url');
 		$this->load->view('template/login');
-	}
-	public function deconexion()
-	{
-		redirect('welcome/index');
+		
 	}
   
 	// public function session(){
