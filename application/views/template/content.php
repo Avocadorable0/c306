@@ -46,7 +46,6 @@
         </div>
 
         <div class="row">
-
           <?php foreach($liste as $produit){ ?>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
