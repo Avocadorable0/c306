@@ -34,7 +34,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('template/login');
 		
 	}
-
 	public function check()
 	{
 		$data=array();
