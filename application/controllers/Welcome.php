@@ -20,12 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
-	}
-	public function setHeader()
-	{
-		$data['Volou']='Echange';
-		$this->load->view('template/header',$data);
+		$this->load->view('template/login');
 	}	
 
 	public function login(){
@@ -68,8 +63,10 @@ class Welcome extends CI_Controller {
 		$valiny=$this->newsModel->inscri($nom,$mail,$mdp);
 		$this->load->helper('url');
 		$this->load->view('template/login');
-		
-
+	}
+	public function deconexion()
+	{
+		redirect('welcome/index');
 	}
   
 	// public function session(){
