@@ -3,7 +3,9 @@
 class newsModel extends CI_Model {
     
     public function showProduct(){
-        $sql = "select * from produit";
+        $sql = "select utilisateur.idutilisateur,utilisateur.nom as proprietaire,produit.nom as produit,produit.photo as photo,produit.descri as description, prix from EXCHANGE
+        join produit on produit.idproduit=EXCHANGE.idproduit
+        join utilisateur on utilisateur.idutilisateur=EXCHANGE.idutilisateur";
         $query = $this->db->query($sql);
         $result = array();
         foreach($query->result_array() as $row){

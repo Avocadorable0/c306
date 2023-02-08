@@ -2,7 +2,7 @@
   <div class="container">
       <div class="row">
               <div class="col-lg-12">
-                <h1 class="my-4">Votre Produit</h1>
+                <h1 class="my-4">Vos produits</h1>
               </div>
               
               <?php foreach($anazy as $prop){ ?>
@@ -11,7 +11,6 @@
                   <a href="#"><img class="card-img-top" src="http://localhost:8080/ExamToko/c306/assets/images/produits/<?php echo $prop['photo']; ?>" alt=""></a>
                   <div class="card-body">
                     <h4 class="card-title">
-                      <a href="#"><?php echo $prop['proprietaire']; ?></a>
                     </h4>
                     <h3><?php echo $prop['produit']; ?></h3>
                     <h5><?php echo $prop['prix']; ?> Ar</h5>
@@ -30,8 +29,6 @@
 
 
       <div class="col-lg-12">
-
-        <h1 class="my-4">Liste de tous les produits</h1>
 
         <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -60,6 +57,8 @@
           </a>
 
         </div>
+        
+        <h1 class="my-4">Liste de tous les produits</h1>
 
         <div class="row">
           <?php foreach($liste as $produit){ ?>
@@ -68,11 +67,12 @@
               <a href="#"><img class="card-img-top" src="http://localhost:8080/ExamToko/c306/assets/images/produits/<?php echo $produit['photo']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $produit['nom']; ?></a>
+                  <a href="#"><?php echo $produit['produit']; ?></a>
                 </h4>
                 <h5><?php echo $produit['prix']; ?> Ar</h5>
-                <p class="card-text"><?php echo $produit['descri'];?></p>
-                <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Faire une echange</a>
+                <h3><?php echo $produit['proprietaire'] ?></h3>
+                <p class="card-text"><?php echo $produit['description'];?></p>
+                <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Echanger</a>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
