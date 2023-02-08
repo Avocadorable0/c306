@@ -45,6 +45,8 @@ class Welcome extends CI_Controller {
 
 		$valiny=$this->newsModel->conekta($mail,$mdp);
 		$data['liste'] = $this->newsModel->showProduct();
+		$valiny1=$this->newsModel->listproduct($valiny['idutilisateur']);
+		$data['anazy']=$valiny1;
 		$data['userData']=$valiny;
 
 		if(count($valiny)==0){
