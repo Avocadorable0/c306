@@ -28,6 +28,16 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <form action="search.php" method="get">
+        <input type="text" name="query">
+        <select name="categorie">
+          <option>Vetement</option>
+          <option>Objet</option>
+          <option>Technologie</option>
+        </select>
+        <input type="submit" value="Search">
+      </form>
+      </div>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
