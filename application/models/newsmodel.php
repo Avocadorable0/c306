@@ -15,7 +15,7 @@ class newsModel extends CI_Model {
     public function listproduct(){
         $sql = "select utilisateur.idutilisateur,utilisateur.nom as proprietaire,produit.nom as produit, prix from EXCHANGE
                 join produit on produit.idproduit=EXCHANGE.idproduit
-                join utilisateur on utilisateur.idutilisateur=EXCHANGE.idutilisateur";
+                join utilisateur on utilisateur.idutilisateur=EXCHANGE.idutilisateur where utilisateur.idutilisateur";
         $squery = $this->db->query($sql);
         foreach($squery->result_array() as $row){
             $result[] = $row;
@@ -35,6 +35,10 @@ class newsModel extends CI_Model {
         $sql1=sprintf($sql,$this->db->escape($Nom),$this->db->escape($Email),$this->db->escape($Mdp));
         $this->db->query($sql1);
         echo $this->db->affected_rows();
+    }
+    public function produitUser()
+    {
+        $sql="select * from "
     }
 }
 

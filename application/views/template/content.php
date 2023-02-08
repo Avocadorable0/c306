@@ -8,13 +8,13 @@
               <?php foreach($liste as $produit){ ?>
               <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                  <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                  <a href="#"><img class="card-img-top" src="http://localhost:8080/ExamToko/c306/assets/images/produits/<?php echo $produit['photo']; ?>" alt=""></a>
                   <div class="card-body">
                     <h4 class="card-title">
                       <a href="#"><?php echo $produit['nom']; ?></a>
                     </h4>
                     <h5><?php echo $produit['prix']; ?></h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                    <p class="card-text"><?php echo $produit['descri']; ?>.</p>
                     <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Faire une echange</a>
                   </div>
                   <div class="card-footer">
@@ -59,7 +59,6 @@
           </a>
 
         </div>
-<<<<<<< Updated upstream
 
         <div class="row">
           <?php foreach($liste as $produit){ ?>
@@ -81,12 +80,6 @@
           </div>
           <?php } ?>
 
-=======
-        <div class="btn-group-toggle" data-toggle="buttons">
-          <a href="#"><label class="btn btn-primary btn-lg active">
-            Voir la liste
-          </label></a>
->>>>>>> Stashed changes
         </div>
 
 

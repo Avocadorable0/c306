@@ -29,6 +29,7 @@ create table exchange(
 insert into utilisateur values(null,'Faly','faly@gmail.com','123',1);
 insert into utilisateur values(null,'Fanilo','fanilo@gmail.com','456',0);
 
+
 -- insert into produit values(null,'stylo','01.png',1500); 
 -- insert into produit values(null,'Phone','05.png',7500); 
 
