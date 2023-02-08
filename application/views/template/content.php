@@ -59,7 +59,6 @@
           </a>
 
         </div>
-<<<<<<< Updated upstream
 
         <div class="row">
           <?php foreach($liste as $produit){ ?>
@@ -81,12 +80,6 @@
           </div>
           <?php } ?>
 
-=======
-        <div class="btn-group-toggle" data-toggle="buttons">
-          <a href="#"><label class="btn btn-primary btn-lg active">
-            Voir la liste
-          </label></a>
->>>>>>> Stashed changes
         </div>
 
 
