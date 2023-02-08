@@ -74,16 +74,16 @@ class Welcome extends CI_Controller {
 		$this->load->view('template/login');
 		
 	}
-	public function search()
+	public function research()
 	{
 		$data=array();
-		$this->load->helper('url');
-		$mot=$this->input->get('mot');
-		$this->load->model('newsModel');
-		$valiny=$this->newsModel->research($mot);
-		$data['valiny2']=$valiny;
 
-		$this->load->view('template/template2',$data);
+		$this->load->helper('url');
+		$mot=$this->input->post('mot');
+
+		$this->load->model('newsModel');
+		$data['Valiny2']=$this->newsModel->recherche($mot);
+		$this->load->view('template2',$data);
 	}
   
 	// public function session(){

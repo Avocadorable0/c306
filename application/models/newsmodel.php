@@ -38,17 +38,18 @@ class newsModel extends CI_Model {
         $this->db->query($sql1);
         echo $this->db->affected_rows();
     }
-    public function research($mot)
+    public function recherche($mot)
     {
-        $sql="select utilisateur.idutilisateur,utilisateur.nom ,produit.nom ,produit.photo ,produit.descri , produit.prix from EXCHANGE
+        $sql="select utilisateur.idutilisateur,utilisateur.nom as proprio,produit.nom as produit,produit.photo as photo,produit.descri as descri, produit.prix as prix from EXCHANGE
         join produit on produit.idproduit=EXCHANGE.idproduit
         join utilisateur on utilisateur.idutilisateur=EXCHANGE.idutilisateur where produit.nom like '%$mot%' or produit.descri like '%$mot%'";
-        $query=$this->db->query($sql);
+        $query = $this->db->query($sql);
+        $result = array();
         foreach($query->result_array() as $row){
             $result[] = $row;
         }
         return $result;
-    }
+}
 }
 
 
