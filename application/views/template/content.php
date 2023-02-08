@@ -13,7 +13,7 @@
                     <h4 class="card-title">
                       <a href="#"><?php echo $produit['nom']; ?></a>
                     </h4>
-                    <h5><?php echo $produit['prix']; ?></h5>
+                    <h5><?php echo $produit['prix']; ?> Ar</h5>
                     <p class="card-text"><?php echo $produit['descri']; ?>.</p>
                     <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Faire une echange</a>
                   </div>
@@ -69,7 +69,7 @@
                 <h4 class="card-title">
                   <a href="#"><?php echo $produit['nom']; ?></a>
                 </h4>
-                <h5><?php echo $produit['prix']; ?></h5>
+                <h5><?php echo $produit['prix']; ?> Ar</h5>
                 <p class="card-text"><?php echo $produit['descri'];?></p>
                 <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Faire une echange</a>
               </div>
