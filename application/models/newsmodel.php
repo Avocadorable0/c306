@@ -13,7 +13,7 @@ class newsModel extends CI_Model {
     }
 
     public function listproduct($Id){
-        $sql = "select utilisateur.idutilisateur,utilisateur.nom as proprietaire,produit.nom as produit, prix from EXCHANGE
+        $sql = "select utilisateur.idutilisateur,utilisateur.nom as proprietaire,produit.nom as produit,produit.photo as photo,produit.descri as description, prix from EXCHANGE
                 join produit on produit.idproduit=EXCHANGE.idproduit
                 join utilisateur on utilisateur.idutilisateur=EXCHANGE.idutilisateur where utilisateur.idutilisateur=$Id";
         $squery = $this->db->query($sql);
